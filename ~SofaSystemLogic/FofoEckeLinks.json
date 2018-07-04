@@ -1,0 +1,17 @@
+{
+  "id": "sitzfeldt:FofoLinks",
+  "labels": {
+    "en": "Mittelteil",
+    "de": "Mittelteil"
+  },
+  "geometry": "
+            BeginObjGroup(lef);
+            AddCube(Vector3f{850,1100,410});
+            MoveMatrixBy(Vector3f{250,0,0});
+            AddCube(Vector3f{850,250,270});
+            MoveMatrixBy(Vector3f{250,0,410});
+            AddCube(Vector3f{250,850,680});
+            EndObjGroup();
+            SetObjSurface('sitzfeldt:Fino_mittelgrau');
+    "
+}

@@ -1,0 +1,409 @@
+{
+    "id": "sitzfeldt:FofoSofaSystem",
+    "onUpdate": "
+        leftSideDockable = true;
+        rightSideDockable = true;
+        if (elementType == 'FofoEckeLinks') {
+            leftSideDockable = false;
+    }
+        if (elementType == 'FofoEckeRechts') {
+            rightSideDockable = false;
+    }
+    ",
+    "parameters": [
+        {
+            "key": "legs",
+            "enabled": "false",
+            "visible": "false",
+            "labels": {
+                "en": "Fussgestel",
+                "de": "Fussgestel"
+            },
+            "type": "Material",
+            "defaultValue": "sitzfeldt:Wood",
+            "validValues": [
+                "sitzfeldt:Wood"
+            ]
+        }, {
+            "key": "SofaMat",
+            "global": true,
+            "enabled": true,
+            "visible": false,
+            "labels": {
+                "en": "Material",
+                "de": "Material"
+            },
+            "type": "Material",
+            "defaultValue": "sitzfeldt:Fino_mittelgrau",
+            "validValues": [
+            "sitzfeldt:Natura_weiss",
+            "sitzfeldt:Natura_hellgrau",
+            "sitzfeldt:Natura_beige",
+            "sitzfeldt:LederPur_dark_grey",
+            "sitzfeldt:LederPur_dark_brown",
+            "sitzfeldt:LederPur_schwarzV2",
+            "sitzfeldt:Leder_Pur_beige_2",
+            "sitzfeldt:Pur_schwarz_test",
+            "sitzfeldt:Natura_rot",
+            "sitzfeldt:Natura_flieder",
+            "sitzfeldt:Natura_gruen",
+            "sitzfeldt:Natura_grau",
+            "sitzfeldt:Natura_dunkelblau",
+            "sitzfeldt:Natura_dunkelgrau",
+            "sitzfeldt:Nobile_weiss",
+            "sitzfeldt:Nobile_beige",
+            "sitzfeldt:Nobile_braun",
+            "sitzfeldt:Nobile_hellgrau",
+            "sitzfeldt:Nobile_dunkelgrau",
+            "sitzfeldt:Klassik_tomaat",
+            "sitzfeldt:Klassik_braun",
+            "sitzfeldt:Klassik_schwarz",
+            "sitzfeldt:Klassik_wood",
+            "sitzfeldt:Klassik_taupe",
+            "sitzfeldt:Klassik_dunkelgrau",
+            "sitzfeldt:Modesto_beige",
+            "sitzfeldt:Modesto_hellbraun",
+            "sitzfeldt:Modesto_senfgelb",
+            "sitzfeldt:Modesto_orange_grau",
+            "sitzfeldt:Modesto_rot_orange",
+            "sitzfeldt:Modesto_blau_braun",
+            "sitzfeldt:Modesto_hellgrau",
+            "sitzfeldt:Modesto_dunkelgrau",
+            "sitzfeldt:Modesto_schwarz",
+            "sitzfeldt:Fino_hellgrau",
+            "sitzfeldt:Fino_mittelgrau",
+            "sitzfeldt:Fino_dunkelgrau",
+            "sitzfeldt:Fino_beige",
+            "sitzfeldt:Fino_grau_braun",
+            "sitzfeldt:Fino_hellblau",
+            "sitzfeldt:Fino_altrosa",
+            "sitzfeldt:Fino_mintgruen",
+            "sitzfeldt:Fino_gelb",
+            "sitzfeldt:Fino_rot",
+            "sitzfeldt:Lana_hellgrau",
+            "sitzfeldt:Lana_mittelgrau",
+            "sitzfeldt:Lana_schwarz",
+            "sitzfeldt:Lana_beige",
+            "sitzfeldt:Lana_braun",
+            "sitzfeldt:Lana_dunkelbraun",
+            "sitzfeldt:Lana_hellgruen",
+            "sitzfeldt:Lana_orange",
+            "sitzfeldt:Lana_gruen",
+            "sitzfeldt:Lana_mittelblau"
+          ]
+        },
+        {
+            "key": "elementType",
+            "labels": {
+                "en": "SOFA-ELEMNTTYP",
+                "de": "SOFA-ELEMNTTYP"
+            },
+            "defaultValue": "FofoMittelteil",
+            "type": "String",
+            "enabled": true,
+            "visible": true,
+            "highlighted": true,
+            "valueObjects": [
+                {
+                    "condition": "(nothingOnLeft || nothingOnRight)",
+                    "value": "FofoMittelteil",
+                    "labels": {
+                        "de": "Fofo Mittelteil",
+                        "en": "Fofo Mittelteil"
+                    },
+                    "thumbnail": "https://roomle-catalogs.storage.googleapis.com/eb6ce48f-8f6b-4b04-ac5b-e749553e984d/components/FofoMittelteil/perspectiveImage.png"
+                    
+                },
+                {
+                    "condition": "(nothingOnLeft)",
+                    "value": "FofoEckeLinks",
+                    "labels": {
+                        "de": "Fofo Ecke Links",
+                        "en": "Fofo Ecke Links"
+                    },
+                    "thumbnail": "https://roomle-catalogs.storage.googleapis.com/eb6ce48f-8f6b-4b04-ac5b-e749553e984d/components/FofoLinks/perspectiveImage.png"
+                },
+                {
+                    "condition": "(nothingOnRight)",
+                    "value": "FofoEckeRechts",
+                    "labels": {
+                        "de": "Fofo Ecke Rechts",
+                        "en": "Fofo Ecke Rechts"
+                    },
+                    "thumbnail": "https://roomle-catalogs.storage.googleapis.com/eb6ce48f-8f6b-4b04-ac5b-e749553e984d/components/FofoEckeRechts/perspectiveImage.png"
+                }
+            ]
+        },
+        {
+            "key": "leftSideDockable",
+            "defaultValue": true,
+            "type": "Boolean",
+            "visible": false
+        },
+        {
+            "key": "rightSideDockable",
+            "defaultValue": true,
+            "type": "Boolean",
+            "visible": false
+        },
+        {
+            "key": "nothingOnLeft",
+            "defaultValue": true,
+            "type": "Boolean",
+            "visible": false
+        },
+        {
+            "key": "nothingOnRight",
+            "defaultValue": true,
+            "type": "Boolean",
+            "visible": false
+        },
+        {
+            "key": "neighbourIsKombi",
+            "defaultValue": false,
+            "type": "Boolean",
+            "visible": false
+        },
+        {
+            "key": "leftDockAvaliable",
+            "defaultValue": true,
+            "type": "Boolean"
+        },
+        {
+            "key": "rightDockAvaliable",
+            "defaultValue": true,
+            "type": "Boolean"
+        },
+        {
+            "key": "allowKombiLeft",
+            "defaultValue": true,
+            "type": "Boolean"
+        },
+        {
+            "key": "allowKombiRight",
+            "defaultValue": true,
+            "type": "Boolean"
+        },
+        {
+            "key": "allowStraightLeft",
+            "defaultValue": true,
+            "type": "Boolean"
+        },
+        {
+            "key": "allowStraightRight",
+            "defaultValue": true,
+            "type": "Boolean"
+        },
+        {
+            "key": "kombiLeftUsed",
+            "defaultValue": false,
+            "type": "Boolean"
+        },
+        {
+            "key": "kombiRightUsed",
+            "defaultValue": false,
+            "type": "Boolean"
+        },
+        {
+            "key": "elementDepth",
+            "defaultValue": 1100,
+            "type": "Decimal",
+            "visible": false
+        },
+        {
+            "key": "elementWidth",
+            "defaultValue": 1100,
+            "type": "Decimal",
+            "visible": false,
+            "valueObjects": [
+                {
+                    "condition": "(elementType == 'FofoMittelteil')",
+                    "value": 850
+                }
+            ]
+        }
+    ],
+    "subComponents": [
+        {
+            "internalId": "FofoMittelteil",
+            "componentId": "sitzfeldt:FofoMittelteil"
+        },
+        {
+            "internalId": "FofoEckeLinks",
+            "componentId": "sitzfeldt:FofoLinks"
+        },
+        {
+            "internalId": "FofoEckeRechts",
+            "componentId": "sitzfeldt:FofoEckeRechts"
+        }
+    ],
+    "geometry": "
+    if (elementType == 'FofoMittelteil') {
+        SubComponent('FofoMittelteil');
+    }
+    if (elementType == 'FofoEckeLinks') {
+        SubComponent('FofoEckeLinks');
+    }
+    if (elementType == 'FofoEckeRechts') {
+        SubComponent('FofoEckeRechts');
+    }
+    ",
+    "possibleChildren": [
+        {
+            "itemId": "sitzfeldt:FofoHocker"
+        },
+        {
+            "itemId": "sitzfeldt:FofoMittelteil"
+        },
+        {
+            "itemId": "sitzfeldt:FofoLinks"
+        },
+        {
+            "itemId": "sitzfeldt:FofoEckeRechts"
+        },
+        {
+            "itemId": "sitzfeldt:FofoKombielementLinks"
+        },
+        {
+            "itemId": "sitzfeldt:FofoKombielementRechts"
+        }
+    ],
+    "parentDockings": {
+        "points": [
+            {
+                "mask": "LeftMask",
+                "position": "{0,0,0}",
+                "condition": "leftDockAvaliable && leftSideDockable && allowStraightLeft",
+                "assignmentsOnUpdate": {},
+                "assignmentsOnDock": {
+                    "kombiLeftUsed": "kombiLeftUsed"
+                },
+                "assignmentsOnUnDock": {},
+                "selfAssignments": {
+                    "onDock": {
+                        "nothingOnLeft": false,
+                        "allowKombiLeft": false
+                    },
+                    "onUnDock": {
+                        "nothingOnLeft": true,
+                        "allowKombiLeft": true
+                    }
+                }
+            },
+            {
+                "mask": "RightMask",
+                "position": "{elementWidth,0,0}",
+                "condition": "rightDockAvaliable && rightSideDockable && allowStraightRight",
+                "assignmentsOnUpdate": {},
+                "assignmentsOnDock": {
+                    "kombiRightUsed": "kombiRightUsed"
+                },
+                "assignmentsOnUnDock": {},
+                "selfAssignments": {
+                    "onDock": {
+                        "nothingOnRight": false,
+                        "allowKombiRight": false
+                    },
+                    "onUnDock": {
+                        "nothingOnRight": true,
+                        "allowKombiRight": true
+                    }
+                }
+            },
+            {
+                "mask": "LeftKombiMask",
+                "position": "{0,0,0}",
+                "condition": "leftDockAvaliable && leftSideDockable && allowKombiLeft && !kombiLeftUsed",
+                "assignmentsOnUpdate": {},
+                "assignmentsOnDock": {},
+                "assignmentsOnUnDock": {},
+                "selfAssignments": {
+                    "onDock": {
+                        "nothingOnLeft": false,
+                        "allowStraightLeft": false
+                    },
+                    "onUnDock": {
+                        "nothingOnLeft": true,
+                        "allowStraightLeft": true
+                    }
+                }
+            },
+            {
+                "mask": "RightKombiMask",
+                "position": "{elementWidth,0,0}",
+                "condition": "rightDockAvaliable && rightSideDockable && allowKombiRight && !kombiRightUsed",
+                "assignmentsOnUpdate": {},
+                "assignmentsOnDock": {},
+                "assignmentsOnUnDock": {},
+                "selfAssignments": {
+                    "onDock": {
+                        "nothingOnRight": false,
+                        "allowStraightRight": false
+                    },
+                    "onUnDock": {
+                        "nothingOnRight": true,
+                        "allowStraightRight": false
+                    }
+                }
+            },
+            {
+                "mask": "hockerFront",
+                "position": "{0,elementDepth,0}",
+                "condition": "(!neighbourIsKombi)",
+                "assignmentsOnUpdate": {},
+                "assignmentsOnDock": {},
+                "assignmentsOnUnDock": {},
+                "selfAssignments": {
+                    "onDock": {
+                        "nothingInFront": false
+                    },
+                    "onUnDock": {
+                        "nothingInFront": true
+                    }
+                }
+            }
+        ]
+    },
+    "childDockings": {
+        "points": [
+            {
+                "mask": "LeftMask",
+                "position": "{elementWidth,0,0}",
+                "condition": "rightSideDockable",
+                "assignmentsOnUpdate": {},
+                "assignmentsOnDock": {},
+                "assignmentsOnUnDock": {},
+                "selfAssignments": {
+                    "onDock": {
+                        "nothingOnRight": false,
+                        "rightDockAvaliable": false
+                    },
+                    "onUnDock": {
+                        "nothingOnRight": true,
+                        "rightDockAvaliable": true
+                    }
+                }
+            },
+            {
+                "mask": "RightMask",
+                "position": "{0,0,0}",
+                "condition": "leftSideDockable",
+                "assignmentsOnUpdate": {},
+                "assignmentsOnDock": {
+                    "kombiRightUsed": "kombiRightUsed"
+                },
+                "assignmentsOnUnDock": {},
+                "selfAssignments": {
+                    "onDock": {
+                        "nothingOnLeft": false,
+                        "leftDockAvaliable": false
+                    },
+                    "onUnDock": {
+                        "nothingOnLeft": true,
+                        "leftDockAvaliable": true
+                    }
+                }
+            }
+        ]
+    }
+}

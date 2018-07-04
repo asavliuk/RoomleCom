@@ -1,0 +1,90 @@
+{
+  "id": "sitzfeldt:FofoKombielementRechts",
+  "labels": {
+    "en": "Fofo Kombielement Rechts",
+    "de": "Fofo Kombielement Rechts"
+  },
+  "parameters": [
+    {
+      "key": "elementDepth",
+      "defaultValue": 1100,
+      "type": "Decimal",
+      "visible": false
+    }, {
+      "key": "elementWidth",
+      "defaultValue": 1100,
+      "type": "Decimal",
+      "visible": false
+    },
+    {
+      "key": "kombiRightUsed",
+      "defaultValue": true,
+      "type": "Boolean"
+    },
+    {
+      "key": "leftDockAvaliable",
+      "defaultValue": false,
+      "type": "Boolean"
+    }, {
+      "key": "rightDockAvaliable",
+      "defaultValue": true,
+      "type": "Boolean"
+    }
+  ],
+  "geometry": "
+            BeginObjGroup(kombi_right);
+   # start
+            AddCube(Vector3f{850,1100,410});
+            AddCube(Vector3f{850,250,270});
+    MoveMatrixBy(Vector3f{0,0,410});
+            AddCube(Vector3f{250,1100,680});
+            MoveMatrixBy(Vector3f{850,0,0});
+   # end        
+            EndObjGroup();
+            SetObjSurface('sitzfeldt:Fino_mittelgrau');
+    ",
+  "childDockings": {
+    "points": [{
+        "mask": "RightKombiMask",
+        "position": "{0,0,0}",
+        "condition": "(true)",
+        "assignmentsOnUpdate": {},
+        "assignmentsOnDock": {
+          "neighbourIsKombi": true
+        },
+        "assignmentsOnUnDock": {
+          "neighbourIsKombi": false
+        },
+        "selfAssignments": {
+          "onDock": {
+          },
+          "onUnDock": {
+          }
+        }
+      }
+    ]
+  },
+  "parentDockings": {
+    "points" : [
+      {
+        "mask": "RightMask",
+        "position": "{elementWidth,elementDepth,0}",
+        "rotation": "{0,0,90}",
+        "condition": "(true)",
+        "assignmentsOnUpdate": {},
+        "assignmentsOnDock": {
+            "neighbourIsKombi": true,
+            "kombiRightUsed": true
+        },
+        "assignmentsOnUnDock": {
+            "neighbourIsKombi": false,
+            "kombiRightUsed": false
+        },
+        "selfAssignments": {
+          "onDock": {},
+          "onUnDock": {}
+        }
+      }
+    ]
+  }
+}

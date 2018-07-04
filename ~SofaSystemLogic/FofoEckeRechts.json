@@ -1,0 +1,17 @@
+{
+  "id": "sitzfeldt:FofoEckeRechts",
+  "labels": {
+    "en": "Mittelteil",
+    "de": "Mittelteil"
+  },
+  "geometry": "
+            BeginObjGroup(rig);
+            AddCube(Vector3f{850,1100,410});
+            AddCube(Vector3f{850,250,270});
+            MoveMatrixBy(Vector3f{0,0,410});
+            AddCube(Vector3f{250,850,680});
+            MoveMatrixBy(Vector3f{850,0,0});
+            EndObjGroup();
+            SetObjSurface('sitzfeldt:Fino_mittelgrau');
+    "
+}

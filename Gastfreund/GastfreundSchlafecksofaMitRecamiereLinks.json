@@ -1,0 +1,330 @@
+{
+    "id": "sitzfeldt:GastfreundMitRecamiereLinks",
+    "onUpdate":"
+    isLeather = false;
+    
+    if ((SofaMat =='sitzfeldt:Klassik_tomaat')||
+        (SofaMat =='sitzfeldt:Klassik_schwarz')||
+        (SofaMat =='sitzfeldt:Klassik_braun')||
+        (SofaMat =='sitzfeldt:Klassik_taupe')||
+        (SofaMat =='sitzfeldt:Klassik_wood')||
+        (SofaMat =='sitzfeldt:LederPur_dark_grey')||
+        (SofaMat =='sitzfeldt:Klassik_dunkelgrau')||
+        (SofaMat =='sitzfeldt:LederPur_schwarzV2')||
+        (SofaMat =='sitzfeldt:LederPur_dark_brown')||
+        (SofaMat =='sitzfeldt:Pur_schwarz_test')||
+        (SofaMat =='sitzfeldt:Leder_Pur_beige_2')
+        )
+                {
+                    isLeather = true;
+                }
+    ",
+    "labels": {
+        "en": "Schlafecksofa mit Recamiere links",
+        "de": "Schlafecksofa mit Recamiere links"
+    },
+    "parameters": [{
+            "key": "legs",
+            "enabled": "false",
+            "visible": "false",
+            "labels": {
+                "en": "Fussgestel",
+                "de": "Fussgestel"
+            },
+            "type": "Material",
+            "defaultValue": "sitzfeldt:Wood",
+            "validValues": [
+                "sitzfeldt:Wood"
+            ]
+        },{
+            "key": "logo",
+            "enabled": "false",
+            "visible": "false",
+            "labels": {
+                "en": "logo",
+                "de": "logo"
+            },
+            "type": "Material",
+            "defaultValue": "sitzfeldt:logo",
+            "validValues": [
+                "sitzfeldt:logo"
+            ]
+        },{
+            "key": "cover",
+            "enabled": "false",
+            "visible": "false",
+            "labels": {
+                "en": "cover",
+                "de": "cover"
+            },
+            "type": "Material",
+            "defaultValue": "sitzfeldt:Natura_weiss",
+            "validValues": [
+                "sitzfeldt:Natura_weiss"
+            ]
+        },
+        {
+            "key": "matras",
+            "enabled": "false",
+            "visible": "false",
+            "labels": {
+                "en": "matras",
+                "de": "matras"
+            },
+            "type": "Material",
+            "defaultValue": "quelle:Seidengrau",
+            "validValues": [
+                "quelle:Seidengrau"
+            ]
+        },
+        {
+            "key": "metal",
+            "enabled": "false",
+            "visible": "false",
+            "labels": {
+                "en": "metal",
+                "de": "metal"
+            },
+            "type": "Material",
+            "defaultValue": "wittmann:Metall_light_grey",
+            "validValues": [
+                "wittmann:Metall_light_grey"
+            ]
+        },
+        {
+            "key": "SofaMat",
+            "enabled": "true",
+            "visible": "true",
+            "labels": {
+                "en": "Material",
+                "de": "Material"
+            },
+            "type": "Material",
+            "defaultValue": "sitzfeldt:Fino_mittelgrau",
+            "validValues": [
+            "sitzfeldt:Natura_weiss",
+            "sitzfeldt:Natura_hellgrau",
+            "sitzfeldt:Natura_beige",
+            "sitzfeldt:LederPur_dark_grey",
+            "sitzfeldt:LederPur_dark_brown",
+            "sitzfeldt:LederPur_schwarzV2",
+            "sitzfeldt:Leder_Pur_beige_2",
+            "sitzfeldt:Pur_schwarz_test",
+            "sitzfeldt:Natura_rot",
+            "sitzfeldt:Natura_flieder",
+            "sitzfeldt:Natura_gruen",
+            "sitzfeldt:Natura_grau",
+            "sitzfeldt:Natura_dunkelblau",
+            "sitzfeldt:Natura_dunkelgrau",
+            "sitzfeldt:Nobile_weiss",
+            "sitzfeldt:Nobile_beige",
+            "sitzfeldt:Nobile_braun",
+            "sitzfeldt:Nobile_hellgrau",
+            "sitzfeldt:Nobile_dunkelgrau",
+            "sitzfeldt:Klassik_tomaat",
+            "sitzfeldt:Klassik_braun",
+            "sitzfeldt:Klassik_schwarz",
+            "sitzfeldt:Klassik_wood",
+            "sitzfeldt:Klassik_taupe",
+            "sitzfeldt:Klassik_dunkelgrau",
+            "sitzfeldt:Modesto_beige",
+            "sitzfeldt:Modesto_hellbraun",
+            "sitzfeldt:Modesto_senfgelb",
+            "sitzfeldt:Modesto_orange_grau",
+            "sitzfeldt:Modesto_rot_orange",
+            "sitzfeldt:Modesto_blau_braun",
+            "sitzfeldt:Modesto_hellgrau",
+            "sitzfeldt:Modesto_dunkelgrau",
+            "sitzfeldt:Modesto_schwarz",
+            "sitzfeldt:Fino_hellgrau",
+            "sitzfeldt:Fino_mittelgrau",
+            "sitzfeldt:Fino_dunkelgrau",
+            "sitzfeldt:Fino_beige",
+            "sitzfeldt:Fino_grau_braun",
+            "sitzfeldt:Fino_hellblau",
+            "sitzfeldt:Fino_altrosa",
+            "sitzfeldt:Fino_mintgruen",
+            "sitzfeldt:Fino_gelb",
+            "sitzfeldt:Fino_rot",
+            "sitzfeldt:Lana_hellgrau",
+            "sitzfeldt:Lana_mittelgrau",
+            "sitzfeldt:Lana_schwarz",
+            "sitzfeldt:Lana_beige",
+            "sitzfeldt:Lana_braun",
+            "sitzfeldt:Lana_dunkelbraun",
+            "sitzfeldt:Lana_hellgruen",
+            "sitzfeldt:Lana_orange",
+            "sitzfeldt:Lana_gruen",
+            "sitzfeldt:Lana_mittelblau"
+          ]
+        },
+        {
+            "key": "Orientation",
+            "enabled": true,
+            "visible": true,
+            "labels": {
+                "en": "Ausrichtung",
+                "de": "Ausrichtung"
+            },
+            "type": "option",
+            "defaultValue": "left",
+            "conditionalValues": [{
+                    "value": "left",
+                    "labels": {
+                        "de": "Links",
+                        "en": "Links"
+                    }
+                },
+                {
+                    "value": "right",
+                    "labels": {
+                        "de": "Rechts",
+                        "en": "Rechts"
+                    }
+                }
+            ]
+
+
+        },
+        {
+            "key": "sleep",
+            "enabled": true,
+            "visible": true,
+            "labels": {
+                "en": "Schlaffunktion anzeigen",
+                "de": "Schlaffunktion anzeigen"
+            },
+            "type": "option",
+            "defaultValue": "close",
+            "conditionalValues": [{
+                    "value": "open",
+                    "labels": {
+                        "de": "Ja",
+                        "en": "Ja"
+                    }
+                },
+                {
+                    "value": "close",
+                    "labels": {
+                        "de": "Nein",
+                        "en": "Nein"
+                    }
+                }
+            ]
+        }
+    ],
+    "subComponents": [
+        {
+          "internalId": "GastfreundMitRecamiere_R_Sleep",
+          "componentId": "sitzfeldt:GastfreundMitRecamiere_R_Sleep",
+          "assignments": {
+            "SofaMat": "SofaMat",
+            "isLeather":"isLeather"
+          }
+        },
+        {
+          "internalId": "GastfreundMitRecamiere_L_Sleep",
+          "componentId": "sitzfeldt:GastfreundMitRecamiere_L_Sleep",
+          "assignments": {
+            "SofaMat": "SofaMat",
+            "isLeather":"isLeather"
+          }
+        },
+        {
+          "internalId": "GastfreundMitRecamiere_L_Sit",
+          "componentId": "sitzfeldt:GastfreundMitRecamiere_L_Sit",
+          "assignments": {
+            "SofaMat": "SofaMat",
+            "isLeather":"isLeather"
+          }
+        },
+        {
+          "internalId": "GastfreundMitRecamiere_R_Sit",
+          "componentId": "sitzfeldt:GastfreundMitRecamiere_R_Sit",
+          "assignments": {
+            "SofaMat": "SofaMat",
+            "isLeather":"isLeather"
+          }
+        }
+      ],
+    "geometry": "
+    # =================== CLOSE COUCH ===================
+        if (Orientation == 'right' && sleep == 'close') {
+            SubComponent('GastfreundMitRecamiere_R_Sit');
+        }
+    # =================== OPEN COUCH ===================
+        if (Orientation == 'right' && sleep == 'open') {     
+            SubComponent('GastfreundMitRecamiere_R_Sleep');
+        }
+    #====================================================================== LEFT
+    # =================== CLOSE COUCH ===================
+        if (Orientation == 'left' && sleep == 'close') {
+            SubComponent('GastfreundMitRecamiere_L_Sit');
+        }
+     # =================== OPEN COUCH ===================    
+        if (Orientation == 'left' && sleep == 'open') {        
+            SubComponent('GastfreundMitRecamiere_L_Sleep');
+        }",
+"articleNr": "
+    if (Orientation == 'right'){
+        articleNr = '19';
+    }
+    if (Orientation == 'left'){
+        articleNr = '20';
+    }
+    if(SofaMat=='sitzfeldt:Natura_weiss'){articleNr = articleNr | '_01_001';}
+    if(SofaMat=='sitzfeldt:Natura_hellgrau'){articleNr = articleNr | '_01_002';}
+    if(SofaMat=='sitzfeldt:Natura_beige'){articleNr = articleNr | '_01_003';}
+    if(SofaMat=='sitzfeldt:Natura_rot'){articleNr = articleNr | '_01_004';}
+    if(SofaMat=='sitzfeldt:Natura_flieder'){articleNr = articleNr | '_01_005';}
+    if(SofaMat=='sitzfeldt:Natura_gruen'){articleNr = articleNr | '_01_006';}
+    if(SofaMat=='sitzfeldt:Natura_grau'){articleNr = articleNr | '_01_007';}
+    if(SofaMat=='sitzfeldt:Natura_dunkelblau'){articleNr = articleNr | '_01_008';}
+    if(SofaMat=='sitzfeldt:Natura_dunkelgrau'){articleNr = articleNr | '_01_009';} 
+    if(SofaMat=='sitzfeldt:Nobile_weiss'){articleNr = articleNr | '_02_013';}  
+    if(SofaMat=='sitzfeldt:Nobile_beige'){articleNr = articleNr | '_02_014';}  
+    if(SofaMat=='sitzfeldt:Nobile_braun'){articleNr = articleNr | '_02_015';}  
+    if(SofaMat=='sitzfeldt:Nobile_hellgrau'){articleNr = articleNr | '_02_016';}  
+    if(SofaMat=='sitzfeldt:Nobile_dunkelgrau'){articleNr = articleNr | '_02_017';}          
+    if(SofaMat=='sitzfeldt:Klassik_tomaat'){articleNr = articleNr | '_03_022';}
+    if(SofaMat=='sitzfeldt:Klassik_braun'){articleNr = articleNr | '_03_023';}
+    if(SofaMat=='sitzfeldt:Klassik_schwarz'){articleNr = articleNr | '_03_024';}
+    if(SofaMat=='sitzfeldt:Klassik_wood'){articleNr = articleNr | '_03_025';}
+    if(SofaMat=='sitzfeldt:Klassik_taupe'){articleNr = articleNr | '_03_026';}
+    if(SofaMat=='sitzfeldt:Klassik_dunkelgrau'){articleNr = articleNr | '_03_027';}                                                                                                                                              
+    if(SofaMat=='sitzfeldt:LederPur_schwarzV2'){articleNr = articleNr | '_04_031';}  
+    if(SofaMat=='sitzfeldt:LederPur_dark_brown'){articleNr = articleNr | '_04_032';} 
+    if(SofaMat=='sitzfeldt:Pur_schwarz_test'){articleNr = articleNr | '_04_033';}  
+    if(SofaMat=='sitzfeldt:Leder_Pur_beige_2'){articleNr = articleNr | '_04_034';}  
+    if(SofaMat=='sitzfeldt:LederPur_dark_grey'){articleNr = articleNr | '_04_035';}         
+    if(SofaMat=='sitzfeldt:Modesto_beige'){articleNr = articleNr | '_06_051';}  
+    if(SofaMat=='sitzfeldt:Modesto_hellbraun'){articleNr = articleNr | '_06_052';}  
+    if(SofaMat=='sitzfeldt:Modesto_senfgelb'){articleNr = articleNr | '_06_053';}  
+    if(SofaMat=='sitzfeldt:Modesto_orange_grau'){articleNr = articleNr | '_06_054';}  
+    if(SofaMat=='sitzfeldt:Modesto_rot_orange'){articleNr = articleNr | '_06_055';}  
+    if(SofaMat=='sitzfeldt:Modesto_blau_braun'){articleNr = articleNr | '_06_056';}  
+    if(SofaMat=='sitzfeldt:Modesto_hellgrau'){articleNr = articleNr | '_06_057';}  
+    if(SofaMat=='sitzfeldt:Modesto_dunkelgrau'){articleNr = articleNr | '_06_058';}  
+    if(SofaMat=='sitzfeldt:Modesto_schwarz'){articleNr = articleNr | '_06_059';}         
+    if(SofaMat=='sitzfeldt:Fino_hellgrau'){articleNr = articleNr | '_07_071';} 
+    if(SofaMat=='sitzfeldt:Fino_mittelgrau'){articleNr = articleNr | '_07_072';} 
+    if(SofaMat=='sitzfeldt:Fino_dunkelgrau'){articleNr = articleNr | '_07_073';} 
+    if(SofaMat=='sitzfeldt:Fino_beige'){articleNr = articleNr | '_07_074';} 
+    if(SofaMat=='sitzfeldt:Fino_grau_braun'){articleNr = articleNr | '_07_075';} 
+    if(SofaMat=='sitzfeldt:Fino_hellblau'){articleNr = articleNr | '_07_076';} 
+    if(SofaMat=='sitzfeldt:Fino_altrosa'){articleNr = articleNr | '_07_077';} 
+    if(SofaMat=='sitzfeldt:Fino_mintgruen'){articleNr = articleNr | '_07_078';} 
+    if(SofaMat=='sitzfeldt:Fino_gelb'){articleNr = articleNr | '_07_079';} 
+    if(SofaMat=='sitzfeldt:Fino_rot'){articleNr = articleNr | '_07_080';} 
+    if(SofaMat=='sitzfeldt:Lana_hellgrau'){articleNr = articleNr | '_08_091';} 
+    if(SofaMat=='sitzfeldt:Lana_mittelgrau'){articleNr = articleNr | '_08_092';} 
+    if(SofaMat=='sitzfeldt:Lana_schwarz'){articleNr = articleNr | '_08_093';} 
+    if(SofaMat=='sitzfeldt:Lana_beige'){articleNr = articleNr | '_08_094';} 
+    if(SofaMat=='sitzfeldt:Lana_braun'){articleNr = articleNr | '_08_095';} 
+    if(SofaMat=='sitzfeldt:Lana_dunkelbraun'){articleNr = articleNr | '_08_096';} 
+    if(SofaMat=='sitzfeldt:Lana_hellgruen'){articleNr = articleNr | '_08_097';} 
+    if(SofaMat=='sitzfeldt:Lana_orange'){articleNr = articleNr | '_08_098';} 
+    if(SofaMat=='sitzfeldt:Lana_gruen'){articleNr = articleNr | '_08_099';} 
+    if(SofaMat=='sitzfeldt:Lana_mittelblau'){articleNr = articleNr | '_08_100';}  
+"
+}

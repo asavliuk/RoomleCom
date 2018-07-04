@@ -1,0 +1,82 @@
+{
+  "id": "sitzfeldt:FofoHocker",
+  "labels": {
+    "en": "Hocker",
+    "de": "Hocker"
+  },
+  "parameters":[
+    {
+      "key":"hockerWidth",
+      "defaultValue":850,
+      "type":"Decimal",
+      "visible":false
+    },
+    {
+      "key":"hockerDepth",
+      "defaultValue":770,
+      "type":"Decimal",
+      "visible":false
+    },
+    {
+      "key":"gap",
+      "defaultValue":400,
+      "type":"Decimal",
+      "visible":false
+    }
+  ],
+  "geometry": "
+        BeginObjGroup(hoc);
+  # start
+        AddCube(Vector3f{850,770,410});
+        MoveMatrixBy(Vector3f{0,200,0});
+  # end   
+        EndObjGroup();
+        SetObjSurface('sitzfeldt:Fino_mittelgrau');
+    ",
+  "childDockings": {
+    "points": [
+      {
+        "mask": "LeftMask",
+        "position": "{gap + hockerWidth,0,0}",
+        "condition": "(true)",
+        "assignmentsOnUpdate": {},
+        "assignmentsOnDock": {},
+        "assignmentsOnUnDock": {},
+        "selfAssignments": {
+          "onDock": {
+          },
+          "onUnDock": {
+          }
+        }
+      },
+      {
+        "mask": "RightMask",
+        "position": "{-gap,0,0}",
+        "condition": "(true)",
+        "assignmentsOnUpdate": {},
+        "assignmentsOnDock": {},
+        "assignmentsOnUnDock": {},
+        "selfAssignments": {
+          "onDock": {
+          },
+          "onUnDock": {
+          }
+        }
+      },
+      {
+        "mask": "hockerFront",
+        "position": "{0,-gap,0}",
+        "condition": "(true)",
+        "assignmentsOnUpdate": {},
+        "assignmentsOnDock": {},
+        "assignmentsOnUnDock": {},
+        "selfAssignments": {
+          "onDock": {
+          },
+          "onUnDock": {
+          }
+        }
+      }
+    ]
+  }
+}
